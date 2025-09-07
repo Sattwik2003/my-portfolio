@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A0B" />
+    <title>Sattwik Panja - Web Developer</title>
+    <meta name="description" content="Sattwik Panja - Web Developer and Designer Portfolio">
+    <!-- <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+      
+      /* Direct styling for reading progress bar - NO CSS VARIABLES, ALL EXPLICIT VALUES */
+      #reading-progress-container {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: rgba(31, 41, 55, 0.5);
+        z-index: 999999;
+        pointer-events: none;
+      }
+      
+      #reading-progress-bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(to right, #10b981, #06b6d4, #22d3ee);
+        transition: width 100ms ease-out;
+      }
+      
+      /* Direct styling for scroll-to-top button - NO CSS VARIABLES, ALL EXPLICIT VALUES */
+      #scroll-top-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #10b981, #06b6d4);
+        color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        z-index: 999999;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+      }
+      
+      #scroll-top-btn.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      
+      #scroll-top-btn:hover {
+        transform: scale(1.1);
+        background: linear-gradient(to right, #059669, #0891b2);
+      }
+    </style> -->
+  </head>
+  <body class="bg-[#0A0A0B]">
+    <!-- Direct HTML implementation - outside of React -->
+    <!-- <div id="reading-progress-container">
+      <div id="reading-progress-bar"></div>
+    </div> -->
+    
+    <!-- <button id="scroll-top-btn" aria-label="Scroll to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+      </svg>
+    </button> -->
+    
+    <div id="root"></div>
+    
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Direct JavaScript implementation - make sure to run it immediately -->
+    <!-- <script>
+      // Run this immediately, don't wait for DOMContentLoaded
+      (function() {
+        // Get elements
+        const progressBar = document.getElementById('reading-progress-bar');
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        
+        // Check if they exist
+        if (!progressBar) console.error('Progress bar element not found');
+        if (!scrollTopBtn) console.error('Scroll top button element not found');
+        
+        // Update progress function
+        function updateProgress() {
+          const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+          const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+          const progress = (scrolled / scrollTotal) * 100;
+          
+          // Update progress bar width
+          if (progressBar && !isNaN(progress) && isFinite(progress)) {
+            progressBar.style.width = `${progress}%`;
+          }
+          
+          // Show/hide scroll to top button
+          if (scrollTopBtn) {
+            if (scrolled > 200) {
+              scrollTopBtn.classList.add('visible');
+            } else {
+              scrollTopBtn.classList.remove('visible');
+            }
+          }
+        }
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', updateProgress);
+        
+        // Add click handler to scroll top button
+        if (scrollTopBtn) {
+          scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+        
+        // Initial update
+        updateProgress();
+        
+        // Log to confirm script has run
+        console.log('Progress bar and scroll-to-top button initialized directly from HTML');
+        
+        // Force a refresh of the progress bar every second for the first 5 seconds
+        // This helps handle any potential timing issues with content loading
+        let refreshCount = 0;
+        const refreshInterval = setInterval(function() {
+          updateProgress();
+          refreshCount++;
+          if (refreshCount >= 5) clearInterval(refreshInterval);
+        }, 1000);
+      })();
+    </script> -->
+  </body>
+</html>
