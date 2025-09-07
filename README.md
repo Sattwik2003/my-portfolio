@@ -1,6 +1,6 @@
 # Modern Developer Portfolio
 
-![Portfolio Screenshot](public/assets/portfolio-screenshot.png)
+![Portfolio Screenshot](public/assets/PortfolioWeb.png)
 
 A sleek, interactive developer portfolio built with React, Vite, and Tailwind CSS that features a terminal-inspired design, smooth animations, and responsive layout.
 
